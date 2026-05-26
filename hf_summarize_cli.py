@@ -11,9 +11,8 @@ from urllib.request import Request, urlopen
 
 TRANSLATION_MODEL = "Helsinki-NLP/opus-mt-de-en"
 SUMMARIZATION_MODEL = "facebook/bart-large-cnn"
-HF_API_URL = "https://api-inference.huggingface.co/models/{model}"
-MAX_INPUT_CHARS = 8000
-
+HF_API_URL = "https://router.huggingface.co/hf-inference/models/{model}"
+MAX_INPUT_CHARS = 2048
 
 class _VisibleTextParser(HTMLParser):
     def __init__(self) -> None:
